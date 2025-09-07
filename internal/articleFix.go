@@ -1,11 +1,9 @@
 package internal
 
-import (
-	"regexp"
-)
+import "regexp"
 
 func ArticleFix(arr []string) []string {
-	reg := regexp.MustCompile(`[ayeoihAYEOIH]`)
+	reg := regexp.MustCompile(`[ayeoihuAYEOIHU]`)
 
 	j := 0
 	for i := 0; i < len(arr); i++ {

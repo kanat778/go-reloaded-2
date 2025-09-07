@@ -18,8 +18,19 @@ func main() {
 		return
 	}
 
-	stringArray := proj.BytesToStrArray(bytes)
-	stringArray = proj.CommandFix(stringArray)
-	stringArray = proj.ArticleFix(stringArray)
+	//stringArray := proj.BytesToStrArray(bytes)
+	//stringArray = proj.CommandFix(stringArray)
+	//stringArray = proj.ArticleFix(stringArray)
+
+	stringArray := proj.FixAll(bytes)
 	fmt.Println(stringArray)
+
+	//for ind, str := range stringArray {
+	//
+	//}
+	//res := 0
+
+	t := proj.IsCommand("(backup, 5)")
+	fmt.Println(t)
+
 }
